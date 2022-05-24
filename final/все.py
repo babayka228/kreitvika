@@ -1,13 +1,22 @@
 class Microsoft:
     def __init__(self):
+        self.numbers=['00000-00000-00000-00000','01234-56789-ABCDI-FGHIK','00425-00000-00002-AA233','HELLO-HELLO-HELLO-HELLO']
         self.year=1975
         self.official_name="Microsft"
         self.name=None
+        self.reg=False
+        self.key=None
     def fun(self):
         if self.name==None:
             print('я '+self.official_name+"я появился "+str(self.year)+" года")
         else:
             print('я '+self.official_name+"я появился "+str(self.year)+" года называли "+self.name)
+    def registation(self):
+        a=input('ключ:')
+        if a in self.numbers:
+            print("вы успешно зарегестрировались")
+            self.reg=True
+            self.key=a
 class Win93(Microsoft):
     def __init__(self):
         self.year=1993
@@ -79,5 +88,6 @@ win7.fun()
 win8.fun()
 win10.fun()
 win11.fun()
-
+m=Microsoft()
+m.registation()
 
